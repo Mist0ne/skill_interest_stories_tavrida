@@ -20,9 +20,17 @@ def handle_dialog(req):
         res['response']['text'] = random_welcome_text['text']
         res['response']['tts'] = random_welcome_text['tts']
         res['response']['buttons'] = main_phrases.welcome_suggest
+        res['session_state'] = {'order': generate_order()}
 
     elif original_utterance in main_phrases.next_synonyms or original_utterance in main_phrases.more_synonyms:
-        random_phrase = random.choice(main_phrases.next_phrases)
+        if len(req['state']['session']['order']) == 0:
+            new_order = generate_order()
+            random_phrase = main_phrases.stories[new_order[0]]
+            res['session_state'] = {'order': new_order[1:]}
+        else:
+            random_phrase = main_phrases.stories[req['state']['session']['order'][0]]
+            res['session_state'] = {'order': req['state']['session']['order'][1:]}
+
         res['response']['text'] = random_phrase['text']
         res['response']['tts'] = random_phrase['tts']
         res['response']['buttons'] = main_phrases.next_suggests
@@ -30,13 +38,13 @@ def handle_dialog(req):
             'playlist': [
                 {
                     'stream': {
-                        'track_id': '2000512019_456239032',
+                        'track_id': 0,
                         'source_type': 'vk',
-                        'source': '2000512019_456239032'
+                        'source': random_phrase['audio_url']
                     },
                     'meta': {
-                        'title': 'title',
-                        'sub_title': 'subtitle'
+                        'title': random_phrase['audio_title'],
+                        'sub_title': random_phrase['audio_subtitle']
                     }
                 }
             ]
@@ -52,6 +60,7 @@ def handle_dialog(req):
         res['response']['text'] = main_phrases.unclear['text']
         res['response']['tts'] = main_phrases.unclear['tts']
         res['response']['buttons'] = main_phrases.welcome_suggest
+        res['session_state']['order'] = req['state']['session']['order']
         if 'errors_count' in req['state']['session']:
             if req['state']['session']['errors_count'] >= 2:
                 random_phrase = random.choice(main_phrases.exit_phrases)
@@ -65,3 +74,9 @@ def handle_dialog(req):
             res['session_state'] = {'errors_count': 1}
 
     return res
+
+
+def generate_order() -> list:
+    order = list(range(len(main_phrases.stories)))
+    random.shuffle(order)
+    return order

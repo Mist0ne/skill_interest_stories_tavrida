@@ -86,6 +86,30 @@ next_phrases = [
     }
 ]
 
+stories = [
+    {
+        "text": "Хотите новую историю?",
+        "tts": "Хотите новую историю?",
+        "audio_url": "2000512019_456239032",
+        "audio_title": "title 1",
+        "audio_subtitle": "subtitle 1",
+    },
+    {
+        "text": "Хотите новую историю?",
+        "tts": "Хотите новую историю?",
+        "audio_url": "2000512019_456239032",
+        "audio_title": "title 2",
+        "audio_subtitle": "subtitle 2",
+    },
+    {
+        "text": "Хотите новую историю?",
+        "tts": "Хотите новую историю?",
+        "audio_url": "2000512019_456239032",
+        "audio_title": "title 3",
+        "audio_subtitle": "subtitle 3",
+    },
+]
+
 next_suggests = [{'title': 'Ещё', 'hide': True}]
 
 stop_synonyms = [
