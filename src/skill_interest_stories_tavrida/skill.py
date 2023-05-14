@@ -39,7 +39,7 @@ def handle_dialog(req):
                 {
                     'stream': {
                         'track_id': 0,
-                        'source_type': 'vk',
+                        'source_type': 'url',
                         'source': random_phrase['audio_url']
                     },
                     'meta': {
