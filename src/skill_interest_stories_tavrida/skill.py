@@ -38,7 +38,7 @@ def handle_dialog(req):
             'playlist': [
                 {
                     'stream': {
-                        'track_id': 0,
+                        'track_id': random_phrase['audio_url'],
                         'source_type': 'url',
                         'source': random_phrase['audio_url']
                     },
