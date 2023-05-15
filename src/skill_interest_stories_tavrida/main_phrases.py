@@ -89,25 +89,60 @@ next_phrases = [
 stories = [
     {
         "text": "Хотите новую историю?",
-        "tts": "Хотите новую историю?",
+        "tts": "Это было ^впечатляюще^! ^Включить^ следующую историю?",
         "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/1.mp3",
-        "audio_title": "title 1",
-        "audio_subtitle": "subtitle 1",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Илья Киборг Морковский",
     },
     {
         "text": "Хотите новую историю?",
-        "tts": "Хотите новую историю?",
-        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/1.mp3",
-        "audio_title": "title 2",
-        "audio_subtitle": "subtitle 2",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/2.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Корнеева Елена",
+    },
+    {
+        "text": "Очень вдохновляет! Хотите ^ещё^ историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/3.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Twins Kovl",
+    },
+    {
+        "text": "Это было ^впечатляюще^! ^Включить^ следующую историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/4.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Nika Dubik",
+    },
+    {
+        "text": "Послушаем ^ещё^ одну историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/5.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "RETUNEC",
+    },
+    {
+        "text": "Очень вдохновляет! Хотите ^ещё^ историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/6.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Владимир Бабенко",
     },
     {
         "text": "Хотите новую историю?",
-        "tts": "Хотите новую историю?",
-        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/1.mp3",
-        "audio_title": "title 3",
-        "audio_subtitle": "subtitle 3",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/7.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Илья ALLERGIA",
     },
+    {
+        "text": "Послушаем ^ещё^ одну историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/8.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Тёма Куба",
+    }
 ]
 
 next_suggests = [{'title': 'Ещё', 'hide': True}]
