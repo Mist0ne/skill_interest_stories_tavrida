@@ -88,7 +88,7 @@ next_phrases = [
 
 stories = [
     {
-        "text": "Хотите новую историю?",
+        "text": "Это было ^впечатляюще^! ^Включить^ следующую историю?",
         "tts": "",
         "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/1.mp3",
         "audio_title": "Вдохновение от Тавриды",

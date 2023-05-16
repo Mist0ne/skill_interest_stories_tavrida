@@ -50,7 +50,7 @@ def handle_dialog(req):
             ]
         }
 
-    elif original_utterance in main_phrases.stop_synonyms:
+    elif original_utterance in main_phrases.stop_synonyms or req['request']['command'] == 'on_interrupt':
         random_phrase = random.choice(main_phrases.exit_phrases)
         res['response']['text'] = random_phrase['text']
         res['response']['tts'] = random_phrase['tts']
@@ -60,7 +60,7 @@ def handle_dialog(req):
         res['response']['text'] = main_phrases.unclear['text']
         res['response']['tts'] = main_phrases.unclear['tts']
         res['response']['buttons'] = main_phrases.welcome_suggest
-        res['session_state']['order'] = req['state']['session']['order']
+        res['session_state'] = {'order': req['state']['session']['order']}
         if 'errors_count' in req['state']['session']:
             if req['state']['session']['errors_count'] >= 2:
                 random_phrase = random.choice(main_phrases.exit_phrases)
@@ -69,9 +69,9 @@ def handle_dialog(req):
                 res['response']['end_session'] = True
                 res['response']['buttons'] = []
             else:
-                res['session_state'] = {'errors_count': req['state']['session']['errors_count'] + 1}
+                res['session_state']['errors_count'] = req['state']['session']['errors_count'] + 1
         else:
-            res['session_state'] = {'errors_count': 1}
+            res['session_state']['errors_count'] = 1
 
     return res
 
