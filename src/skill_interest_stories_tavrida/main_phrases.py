@@ -142,6 +142,27 @@ stories = [
         "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/8.mp3",
         "audio_title": "Вдохновение от Тавриды",
         "audio_subtitle": "Тёма Куба",
+    },
+    {
+        "text": "Хотите новую историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/9.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Никита Городничев",
+    },
+    {
+        "text": "Очень вдохновляет! Хотите ^ещё^ историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/10.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "Lebedeva",
+    },
+    {
+        "text": "Послушаем ^ещё^ одну историю?",
+        "tts": "",
+        "audio_url": "https://ai2.site/marusya_media_hosting/tavrida/audio/11.mp3",
+        "audio_title": "Вдохновение от Тавриды",
+        "audio_subtitle": "ANOPRIEV",
     }
 ]
 
