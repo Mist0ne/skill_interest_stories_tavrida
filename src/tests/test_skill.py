@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from skill_interest_stories_tavrida.skill import skill
+from skill_interest_stories_tavrida.skill import handle_dialog
 
 base_req_file_name = Path(__file__).parent / 'base_request.json'
 
@@ -14,14 +14,14 @@ base_req_file_name = Path(__file__).parent / 'base_request.json'
 ])
 def test_skill(phrase_text, new_session, answer_text):
     req = {}
-    resp = {}
     with open(base_req_file_name) as f:
         req = json.load(f)
 
     req['request']['original_utterance'] = phrase_text
     req['request']['command'] = phrase_text
     req['session']['new'] = new_session
+    req['state']['session']['order'] = []
 
-    skill.handle_dialog(req, resp)
+    resp = handle_dialog(req)
 
     assert answer_text in resp['response']['text']
